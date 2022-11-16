@@ -1,0 +1,198 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    /* Primary Colors */
+    --prim-red: hsl(0, 100%, 74%); 
+    --prim-green: hsl(154, 59%, 51%);
+
+    /* Accent */
+    --accent-blue: hsl(248, 32%, 49%);
+    --accent-heavy: hsl(228, 45%, 44%);
+
+    /* Neutral */
+    --neutral-dark-blue: hsl(249, 10%, 26%); 
+    --neutral-grayish-blue: hsl(246, 25%, 77%);
+
+    /* Default colors */
+    --light: #fff;
+    --dark: #000;
+
+    /* Shadows */
+    --shadow-red: hsl(0, 87%, 69%);
+
+    /* Base font size */
+    --base-font: 16px;    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url("/images/bg-intro-mobile.png") no-repeat center / cover;
+    background-color: var(--prim-red);
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 375px;
+    margin: 0 auto;  
+    padding: 1em; 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5em 1em;
+    border: none;
+    border-radius: .4em;
+    text-align: center;
+    background-color: var(--light);
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 6px var(--shadow-red);
+} 
+
+.message {
+    color: #fa3232;
+    text-decoration: underline;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 0.5em auto;
+    width: 100%;
+    padding: .95em 2em;
+    border: 1px solid #efefef;
+    border-radius: .2em;
+    text-align: left;
+}
+
+.head {
+    padding: .60em 3em;
+    text-align: center;
+    background: var(--accent-blue);
+    color: var(--light);
+    border-radius: .4em;
+    margin-bottom: .8em;
+    font-size: .85rem;
+    box-shadow: 0 5px var(--shadow-red);
+}
+
+.intro__text {
+    width: 100%;
+    padding: 3em 1em;
+}
+
+.intro__text h1 {
+    font-size: 1.55rem;
+    margin-bottom: 1em;
+    text-align: center;
+    color: var(--light);
+}
+
+.intro__offer {
+    font-weight: 700;
+}
+
+.intro__text p {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--light);
+}
+
+.btn {
+    display: block;
+    padding: .95em 2em;
+    margin: 2em auto;
+    text-align: center;
+    width: 100%;
+    background: var(--prim-green);
+    color: var(--light);
+    border: none;
+    border-radius: .3em;
+    text-transform: uppercase;
+    font-size: .85rem;
+    font-weight: 500;
+    text-shadow: 1px 1px #efefef;
+    box-shadow: 1px 3px #a4eba4;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+footer {
+    padding: 0 2em;
+    margin: 0 .35em;
+}
+
+.attribution { 
+    font-size: 0.75rem; 
+    text-align: center;
+    padding: 1em 1.9em; 
+}
+
+.attribution a { 
+    color: var(--accent-heavy); 
+}
+
+.terms {
+    padding: 0 1.5em;
+    font-size: .70rem;
+    color: var(--neutral-grayish-blue);
+}
+
+.red__text {
+    color: var(--prim-red);
+}
+
+.red__text:hover {
+    cursor: pointer;
+}
+
+/* Media query */
+@media screen and (min-width: 990px) {
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: url("/images/bg-intro-desktop.png") no-repeat center / cover;
+        background-color: var(--prim-red);
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: 5em auto 0;
+        min-width: 100vw;
+    } 
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        padding-right: 5em;
+    }
+
+    .intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro__text h1 {
+        font-size: 2rem;
+        text-align: start;
+        padding: 0 3em;
+        line-height: 1;
+    }
+
+    .intro__text p {
+        text-align: left;
+        padding: 0 5em;
+        margin-left: 2em;
+    }
+}
